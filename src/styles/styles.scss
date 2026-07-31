@@ -1,0 +1,9 @@
+@use 'base/base';
+@use 'components/components';
+
+[id] {
+  font-size: 40px;
+  color: rebeccapurple;
+  line-height: 1;
+  border: 5px black solid;
+}
