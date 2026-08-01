@@ -2,7 +2,8 @@
   &__container {
     justify-content: space-between;
     align-items: center;
-    padding-top: 16px;
+    min-height: 68px;
+    margin-bottom: 70px;
   }
 
   &__left {
@@ -66,7 +67,11 @@
     top: 100%;
     padding: 10px;
     color: var(--color-main);
-    background: var(--background-button-transparent);
+    background: black;
+    z-index: 10;
+    border-radius: var(--border-radius);
+    border: 1px solid currentColor;
+    width: 100%;
   }
 
   &__right {
@@ -75,6 +80,8 @@
   }
 
   &__link-auth {
+    text-align: center;
+
     &:first-child {
       background: none;
     }
