@@ -1,0 +1,29 @@
+.trust {
+  &__container {
+    flex-direction: column;
+    margin-bottom: clamp(32px, 9vw, 160px);
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    max-width: 750px;
+  }
+
+  &__image {
+    margin-top: -10%;
+  }
+
+  @media (max-width: 750px) {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__image {
+      scale: 2 1;
+    }
+  }
+}

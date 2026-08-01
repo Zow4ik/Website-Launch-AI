@@ -52,6 +52,12 @@ body {
     max-width: 580px;
   }
 
+  @media (max-width: 950px) {
+    &--big {
+      font-size: 42px;
+    }
+  }
+
   @media (max-width: 750px) {
     & {
       font-size: 30px;
