@@ -1,0 +1,22 @@
+.start {
+  &__container {
+    flex-direction: column;
+    margin-bottom: clamp(64px, 12.5vw, 192px);
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+  }
+
+  @media (max-width: 750px) {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
