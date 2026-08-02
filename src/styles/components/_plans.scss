@@ -1,0 +1,164 @@
+.plans {
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: clamp(64px, 15vw, 160px);
+  }
+
+  &__title {
+    max-width: 900px;
+  }
+
+  &__text {
+    max-width: 600px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    background: rgba(250, 250, 250, 0.02);
+    border: 1px solid #1d1d1d;
+    border-radius: var(--border-radius);
+    padding: 24px;
+
+    &-plan {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--color-main);
+      margin-bottom: 8px;
+      position: relative;
+
+      &[data-css-user] {
+        padding-left: 24px;
+      }
+
+      &[data-css-user]::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        background-image: url("@/assets/images/svg/user.svg");
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-accent);
+      margin-bottom: 24px;
+    }
+
+    &-price-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &-price {
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 1;
+      color: var(--color-main);
+      margin-right: 8px;
+
+      &::first-letter {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-accent);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-period {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-main);
+    }
+
+    &-taxes {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-accent);
+    }
+
+    &-link {
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-duration {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-accent);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      display: block;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #1d1d1d;
+      }
+    }
+
+    &-limits {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    &-limit {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-main);
+      padding-left: 24px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 15px;
+        height: 15px;
+        background-image: url("@/assets/images/svg/limit.svg");
+      }
+    }
+  }
+
+  @media (max-width: 910px) {
+    &__container {
+      gap: 24px;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}
