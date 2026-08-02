@@ -1,0 +1,120 @@
+.opinions {
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(64px, 15vw, 160px);
+  }
+
+  &__title {
+    max-width: 675px;
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    max-width: 580px;
+    margin-bottom: 80px;
+  }
+
+  &__carousel {
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:not(&:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+    padding-right: 24px;
+
+    &[data-css-spin-right] {
+      animation: spin 40s infinite linear;
+    }
+
+    &[data-css-spin-left] {
+      animation: spin 40s infinite linear reverse;
+    }
+
+    &-item {
+      max-width: 420px;
+      flex: 0 0 420px;
+      padding: 24px;
+      background: var(--background-button-transparent);
+      border-radius: var(--border-radius);
+    }
+
+    &-header {
+      display: flex;
+      margin-bottom: 8px;
+    }
+
+    &-image {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+      display: inline-block;
+    }
+
+    &-user {
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--color-main);
+    }
+
+    &-username {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-accent);
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-accent);
+
+      span {
+        color: #fdba74;
+      }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      translate: 0%;
+    }
+    100% {
+      translate: -100%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__list-item {
+      max-width: 300px;
+    }
+  }
+}

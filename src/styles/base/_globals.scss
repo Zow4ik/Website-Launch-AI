@@ -1,5 +1,6 @@
 body {
   background-color: #09090b;
+  font-family: var(--font-family), sans-serif;
 }
 
 .container {
@@ -11,7 +12,6 @@ body {
 
 .link,
 .link--white {
-  font-family: var(--font-family), sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
@@ -31,7 +31,6 @@ body {
 }
 
 .title-h2 {
-  font-family: var(--font-family), sans-serif;
   font-weight: 600;
   font-size: 48px;
   line-height: 1;
@@ -43,7 +42,6 @@ body {
   }
 
   &-text {
-    font-family: var(--font-family), sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;

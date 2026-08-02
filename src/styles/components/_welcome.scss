@@ -12,7 +12,6 @@
   }
 
   &__badge {
-    font-family: var(--font-family), sans-serif;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -44,7 +43,6 @@
   }
 
   &__title {
-    font-family: var(--font-family), sans-serif;
     font-weight: 600;
     font-size: clamp(36px, 7vw, 96px);
     line-height: 1;
