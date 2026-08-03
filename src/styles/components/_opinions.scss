@@ -19,6 +19,7 @@
     overflow-x: auto;
     width: 100%;
     display: flex;
+    pointer-events: none;
 
     &::-webkit-scrollbar {
       display: none;
